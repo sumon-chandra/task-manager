@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to Task Manager API");
 });
 // MongoDB comments
-const uri = `mongodb+srv://${process.env.MONGODB_USER_MANE}:${process.env.MONGODB_USER_PASSWORD}@cluster0.lh1oos6.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://sumon-task-manager:sumon-task-manager@cluster0.lh1oos6.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
