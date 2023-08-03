@@ -1,9 +1,24 @@
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import CompletedTasks from "./pages/CompletedTasks";
+import ImportantTasks from "./pages/ImportantTasks";
+
 const App = () => {
-  return (
-    <div>
-      <h3>Task Manager</h3>
-    </div>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route path="/" element={<Home />} />
+        <Route path="completed" element={<CompletedTasks />} />
+        <Route path="important" element={<ImportantTasks />} />
+      </>
+    )
   );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
